@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Hole : MonoBehaviour
@@ -12,7 +13,7 @@ public class Hole : MonoBehaviour
             {
                 if (b.Point > 0)
                 {
-                    GameManager.Instance.ShowNotiText("White Ball drop!!!\nYou Lose!");
+                    GameManager.Instance.ShowString("White Ball drop!!!\nYou Lose!");
                     Time.timeScale = 0f;
                 }
                 else
