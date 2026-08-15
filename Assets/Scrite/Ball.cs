@@ -5,19 +5,24 @@ using UnityEngine.EventSystems;
 public enum BallColor
 {
     White,
-    red,
+    Red,
     Yellow,
     Green,
     Brown,
     Blue,
-    Pimk,
-    Black,
+    Pink,
+    Black
 }
 
 public class Ball : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
     private int point;
+    public int Point
+    {
+        get { return point; }
+        set { point = value; }
+    }
 
     [SerializeField] 
     private BallColor color;
@@ -32,13 +37,18 @@ public class Ball : MonoBehaviour, IPointerClickHandler
         Destroy(gameObject);
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        rd = GetComponent<MeshRenderer>();
+    }
+
+   
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
