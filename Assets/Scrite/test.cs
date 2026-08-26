@@ -1,15 +1,16 @@
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class Test : MonoBehaviour
 {
     private int n = 1;
     private float timer = 0f;
+
     void Awake()
     {
         Debug.Log("Awake");
     }
 
-    void   Start()
+    void Start()
     {
         Debug.Log("Start");
     }
@@ -18,6 +19,8 @@ public class test : MonoBehaviour
     {
         timer += Time.deltaTime;
         n++;
+
+        Debug.Log(Time.deltaTime);
 
         if (timer >= 1f)
         {
